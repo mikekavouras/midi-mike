@@ -100,8 +100,6 @@ var KEYS = {
 function AudioPlayer() {
   this.context = new webkitAudioContext();
   this.sources = [];
-  this.volumes = [];
-  this.reverbs = [];
 
   this.octave = 4;
   this.key = 'C';
@@ -113,36 +111,16 @@ AudioPlayer.prototype = {
   init: function() {
     for (var i = 0; i < 3; i++) {
       var oscillator = this.context.createOscillator();
-      var volume = this.context.createGainNode();
-      var reverb = this.context.createConvolver();
       oscillator.type = 3;
       this.sources.push(oscillator);
-      this.reverbs.push(reverb);
-      this.volumes.push(volume);
     }
   },
 
   play: function() {
     for (var i = 0; i < 3; i++) {
-      this.sources[i].connect(this.volumes[i]);
-      this.volumes[i].connect(this.context.destination);
-      this.volumes[i].gain.value = 1;
+      this.sources[i].connect(this.context.destination);
       this.sources[i].noteOn(0);
     }
-
-    var player = this;
-    this.t = setInterval(function() {
-      for (i = 0; i < player.volumes.length; i++) {
-        player.volumes[i].gain.value -= 0.02;
-        player.sources[i].detune.value += 20;
-      }
-      if (player.volumes[0].gain.value <= 0) {
-        clearInterval(player.t);
-        for (i = 0; i < player.volumes.length; i++) {
-          player.sources[i].detune.value = 0;
-        }
-      }
-    }, 10)
   },
 
   pause: function() {
