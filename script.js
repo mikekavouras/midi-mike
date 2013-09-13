@@ -1,14 +1,36 @@
+colors = [
+  "darksalmon",
+  "cadetblue",
+  "darkseagreen",
+  "slategray",
+  "darkgray",
+  "sandybrown",
+  "powderblue",
+  "palevioletred",
+  "goldenrod"
+];
+
 $(document).ready(function() {
    var Player = new MidiPlayer();
 
    var click = "ontouchstart" in document ? "touchstart" : "click";
 
    $('.key').bind(click, function(e) {
+     e.preventDefault();
      var $self = $(this);
      var note = $self.attr('data-note');
      var octave = parseInt($self.attr('data-octave'));
-     $self.toggleClass('active');
+     var rand = Math.floor(Math.random() * colors.length + 1);
+     $self.css('backgroundColor' , colors[rand]);
      Player.playNote(note, octave);
+   });
+
+   $('.key.white').bind('touchend', function(e) {
+     $(this).css('backgroundColor' , 'transparent');
+   });
+
+   $('.key.black').bind('touchend', function(e) {
+     $(this).css('backgroundColor' , '#333');
    });
 
    $('#wave-types button').bind(click, function() {
