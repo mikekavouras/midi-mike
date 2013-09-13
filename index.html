@@ -7,17 +7,43 @@
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+  <link href="style.css" rel="stylesheet">
+
 </head>
 <body>
 
-  <div id="chords">
-    <button data-chord="C">C</button>
-    <button data-chord="D">D</button>
-    <button data-chord="E">E</button>
-    <button data-chord="F">F</button>
-    <button data-chord="G">G</button>
-    <button data-chord="A">A</button>
-    <button data-chord="B">B</button>
+  <div id="keyboard">
+    <div class="white-keys">
+      <div class="key white" data-note="C" data-octave="4">
+      </div>
+      <div class="key white" data-note="D" data-octave="4">
+      </div>
+      <div class="key white" data-note="E" data-octave="4">
+      </div>
+      <div class="key white" data-note="F" data-octave="4">
+      </div>
+      <div class="key white" data-note="G" data-octave="4">
+      </div>
+      <div class="key white" data-note="A" data-octave="4">
+      </div>
+      <div class="key white" data-note="B" data-octave="4">
+      </div>
+      <div class="key white" data-note="C" data-octave="5">
+      </div>
+    </div>
+
+    <div class="black-keys">
+      <div class="key black" data-note="C#" data-octave="4">
+      </div>
+      <div class="key black" data-note="D#" data-octave="4">
+      </div>
+      <div class="key black" data-note="F#" data-octave="4">
+      </div>
+      <div class="key black" data-note="G#" data-octave="4">
+      </div>
+      <div class="key black" data-note="A#" data-octave="4">
+      </div>
+    </div>
   </div>
 
   <script src="sound.js"></script>

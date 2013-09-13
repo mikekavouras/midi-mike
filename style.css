@@ -1,0 +1,56 @@
+#keyboard {
+  width: 800px;
+  height: 300px;
+  background: #ccc;
+  margin: 0px auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+.white-keys {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.key.white {
+  height: 100%;
+  width: 100px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  float: left;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.black-keys {
+  position: absolute;
+}
+
+.key.black {
+  float: left;
+  width: 40px;
+  height: 150px;
+  background: #444;
+  position: absolute;
+}
+
+.key.black:nth-child(1) {
+  left: 79px;
+}
+
+.key.black:nth-child(2) {
+  left: 179px;
+}
+
+.key.black:nth-child(3) {
+  left: 379px;
+}
+
+.key.black:nth-child(4) {
+  left: 479px;
+}
+
+.key.black:nth-child(5) {
+  left: 579px;
+}
