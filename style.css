@@ -54,3 +54,11 @@
 .key.black:nth-child(5) {
   left: 579px;
 }
+
+#wave-types {
+  text-align: center;
+  margin-top: 40px;
+}
+#wave-types button {
+  display: inline-block
+}
