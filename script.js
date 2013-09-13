@@ -31,7 +31,9 @@ AudioPlayer.prototype = {
 $(document).ready(function() {
    var Player = new AudioPlayer();
 
-   $('.key').bind('click, touchstart', function(e) {
+   var click = "ontouchstart" in document ? "touchstart" : "click";
+
+   $('.key').bind(click, function(e) {
      var $self = $(this);
      var note = $self.attr('data-note');
      var octave = parseInt($self.attr('data-octave'));
