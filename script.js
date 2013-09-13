@@ -11,7 +11,7 @@ colors = [
 ];
 
 $(document).ready(function() {
-   var Player = new MidiPlayer();
+   var Player = new MIDIPlayer();
 
    var down = "ontouchstart" in document ? "touchstart" : "mousedown";
    var up = "ontouchstart" in document ? "touchend" : "mouseup";

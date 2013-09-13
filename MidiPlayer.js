@@ -1,4 +1,4 @@
-function MidiPlayer() {
+function MIDIPlayer() {
   this._context = new webkitAudioContext();
   this._currentWaveType = 0;
   this._waveTypes = {
@@ -11,7 +11,7 @@ function MidiPlayer() {
   this.init();
 }
 
-MidiPlayer.prototype = {
+MIDIPlayer.prototype = {
   init: function() {
   },
 
