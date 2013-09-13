@@ -17,7 +17,7 @@ AudioPlayer.prototype = {
     source.noteOn(0);
 
     var t = setInterval(function() {
-      volume.gain.value -= 0.01;
+      volume.gain.value -= 0.02;
       if (volume.gain.value <= 0) {
         clearInterval(t);
       }
