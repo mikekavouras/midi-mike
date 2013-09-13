@@ -11,7 +11,7 @@ $(document).ready(function() {
      Player.playNote(note, octave);
    });
 
-   $('#wave-types button').bind('click', function() {
+   $('#wave-types button').bind(click, function() {
      var type = $(this).attr('id');
      Player._currentWaveType = Player._waveTypes[type];
    });

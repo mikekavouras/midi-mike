@@ -1,9 +1,13 @@
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 #keyboard {
-  width: 800px;
-  height: 300px;
-  background: #ccc;
+  width: 100%;
+  height: 100%;
   margin: 0px auto;
-  margin-top: 100px;
   position: relative;
 }
 
@@ -15,12 +19,13 @@
 
 .key.white {
   height: 100%;
-  width: 100px;
+  width: 96px;
   box-sizing: border-box;
   border: 1px solid #333;
   float: left;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  background: #f2f2f2;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .black-keys {
@@ -29,30 +34,32 @@
 
 .key.black {
   float: left;
-  width: 40px;
-  height: 150px;
+  width: 60px;
+  height: 300px;
   background: #444;
   position: absolute;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .key.black:nth-child(1) {
-  left: 79px;
+  left: 65px;
 }
 
 .key.black:nth-child(2) {
-  left: 179px;
+  left: 161px;
 }
 
 .key.black:nth-child(3) {
-  left: 379px;
+  left: 353px;
 }
 
 .key.black:nth-child(4) {
-  left: 479px;
+  left: 449px;
 }
 
 .key.black:nth-child(5) {
-  left: 579px;
+  left: 545px;
 }
 
 #wave-types {
