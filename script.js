@@ -21,20 +21,20 @@ $(document).ready(function() {
      var note = $self.attr('data-note');
      var octave = parseInt($self.attr('data-octave'));
      var rand = Math.floor(Math.random() * colors.length);
-     console.log(rand);
      $self.css('backgroundColor' , colors[rand]);
      Player.playNote(note, octave);
    });
 
    $('.key.white').bind('touchend', function(e) {
-     $(this).css('backgroundColor' , 'transparent');
+     $(this).css('backgroundColor' , '#f2f2f2');
    });
 
    $('.key.black').bind('touchend', function(e) {
-     $(this).css('backgroundColor' , '#333');
+     $(this).css('backgroundColor' , '#444');
    });
 
-   $('#wave-types button').bind(click, function() {
+   $('#wave-types div').bind(click, function() {
+     $(this).siblings('div').removeClass('selected').end().addClass('selected');
      var type = $(this).attr('id');
      Player._currentWaveType = Player._waveTypes[type];
    });

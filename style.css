@@ -63,11 +63,20 @@ html, body {
 }
 
 #wave-types {
-  text-align: center;
-  margin-top: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-#wave-types button {
-  display: inline-block
+
+#wave-types div {
+  text-align: right;
+  padding: 10px 0px;
+  text-align: center;
+  width: 96px;
+}
+
+.selected {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .key.white.active {
