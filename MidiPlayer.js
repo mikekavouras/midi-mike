@@ -29,6 +29,7 @@ MIDIPlayer.prototype = {
       if (volume.gain.value <= 0) {
         clearInterval(t);
         source.disconnect(0);
+        source = null;
       }
     }, 10);
   }
