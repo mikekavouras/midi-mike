@@ -20,7 +20,8 @@ $(document).ready(function() {
      var $self = $(this);
      var note = $self.attr('data-note');
      var octave = parseInt($self.attr('data-octave'));
-     var rand = Math.floor(Math.random() * colors.length + 1);
+     var rand = Math.floor(Math.random() * colors.length);
+     console.log(rand);
      $self.css('backgroundColor' , colors[rand]);
      Player.playNote(note, octave);
    });
