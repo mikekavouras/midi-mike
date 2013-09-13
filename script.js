@@ -17,9 +17,10 @@ AudioPlayer.prototype = {
     source.noteOn(0);
 
     var t = setInterval(function() {
-      volume.gain.value -= 0.02;
+      volume.gain.value -= 0.03;
       if (volume.gain.value <= 0) {
         clearInterval(t);
+        source.disconnect(this.context.destination);
       }
     }, 10);
   },
