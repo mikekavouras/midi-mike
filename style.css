@@ -66,6 +66,7 @@ html, body {
   position: absolute;
   top: 0;
   right: 0;
+  color: #555;
 }
 
 #wave-types div {
@@ -73,12 +74,28 @@ html, body {
   padding: 10px 0px;
   text-align: center;
   width: 96px;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
 .selected {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.key.white.active {
-  background: #ddd;
+#octaves {
+  position: absolute;
+  top: 162px;
+  right: 2px;
+}
+
+#octaves div {
+  width: 46px;
+  float: left;
+  text-align: center;
+  color: #555;
+  padding: 8px 0px;
+}
+
+.active {
+  background: #aaa;
 }

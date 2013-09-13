@@ -13,9 +13,10 @@ colors = [
 $(document).ready(function() {
    var Player = new MidiPlayer();
 
-   var click = "ontouchstart" in document ? "touchstart" : "click";
+   var down = "ontouchstart" in document ? "touchstart" : "mousedown";
+   var up = "ontouchstart" in document ? "touchend" : "mouseup";
 
-   $('.key').bind(click, function(e) {
+   $('.key').bind(down, function(e) {
      e.preventDefault();
      var $self = $(this);
      var note = $self.attr('data-note');
@@ -25,17 +26,37 @@ $(document).ready(function() {
      Player.playNote(note, octave);
    });
 
-   $('.key.white').bind('touchend', function(e) {
+   $('.key.white').bind(up, function(e) {
      $(this).css('backgroundColor' , '#f2f2f2');
    });
 
-   $('.key.black').bind('touchend', function(e) {
+   $('.key.black').bind(up, function(e) {
      $(this).css('backgroundColor' , '#444');
    });
 
-   $('#wave-types div').bind(click, function() {
+   $('#wave-types div').bind(down, function() {
      $(this).siblings('div').removeClass('selected').end().addClass('selected');
      var type = $(this).attr('id');
      Player._currentWaveType = Player._waveTypes[type];
    });
+
+   $('#up, #down').bind(down, function(e) {
+     e.preventDefault();
+     $(this).addClass('active');
+     var up = $(this).attr('id') == "up";
+     var $keys = $('.key');
+     $keys.each(function() {
+       var $self = $(this);
+       var currOctave = parseInt($self.attr('data-octave'), 10);
+       if (up)
+         $self.attr('data-octave', ++currOctave)
+       else
+         $self.attr('data-octave', --currOctave)
+     });
+   });
+
+   $('#down, #up').bind(up, function() {
+     $(this).removeClass('active');
+   });
+
 });

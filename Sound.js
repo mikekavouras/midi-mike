@@ -115,7 +115,26 @@ Sound._notes = {
     "B"  : { "frequency" : "987.77",  "wavelength" : "34.9" }
   },
   6: {
-    "C"  : { "frequency" : "1046.50", "wavelength" : "33.0" }
+    "C"  : { "frequency" : "1046.50", "wavelength" : "33.0" },
+    "C#" : { "frequency" : "1108.73", "wavelength" : "31.1" },
+    "Db" : { "frequency" : "1108.73", "wavelength" : "31.1" },
+    "D"  : { "frequency" : "1174.66", "wavelength" : "29.4" },
+    "D#" : { "frequency" : "1244.51", "wavelength" : "27.7" },
+    "Eb" : { "frequency" : "1244.51", "wavelength" : "27.7" },
+    "E"  : { "frequency" : "1318.51", "wavelength" : "26.2" },
+    "F"  : { "frequency" : "1396.91", "wavelength" : "24.7" },
+    "F#" : { "frequency" : "1479.98", "wavelength" : "23.3" },
+    "Gb" : { "frequency" : "1479.98", "wavelength" : "23.3" },
+    "G"  : { "frequency" : "1567.98", "wavelength" : "22.0" },
+    "G#" : { "frequency" : "1661.22", "wavelength" : "20.8" },
+    "Ab" : { "frequency" : "1661.22", "wavelength" : "20.8" },
+    "A"  : { "frequency" : "1760.00", "wavelength" : "19.6" },
+    "A#" : { "frequency" : "1864.66", "wavelength" : "18.5" },
+    "Bb" : { "frequency" : "1864.66", "wavelength" : "18.5" },
+    "B"  : { "frequency" : "1975.53", "wavelength" : "17.5" }
+  },
+  7: {
+    "C"  : { "frequency" : "2093.00", "wavelength" : "16.5" }
   }
 };
 
