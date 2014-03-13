@@ -99,3 +99,24 @@ html, body {
 .active {
   background: #aaa;
 }
+
+#modes {
+  position: absolute;
+  right: 2px;
+  top: 215px;
+}
+
+#modes div {
+  float: left;
+  width: 46px;
+  text-align: center;
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #444;
+  cursor: pointer;
+  padding: 6px 0px;
+}
+
+#modes .current {
+  background: #bbb;
+}

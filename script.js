@@ -23,7 +23,11 @@ $(document).ready(function() {
      var octave = parseInt($self.attr('data-octave'));
      var rand = Math.floor(Math.random() * colors.length);
      $self.css('backgroundColor' , colors[rand]);
-     Player.playNote(note, octave);
+     if (Player._mode == 1) {
+       Player.playNote(note, octave);
+     } else {
+       Player.playChord(note, octave);
+     }
    });
 
    $('.key.white').bind(up, function(e) {
@@ -57,6 +61,13 @@ $(document).ready(function() {
 
    $('#down, #up').bind(up, function() {
      $(this).removeClass('active');
+   });
+
+   $('#modes div').bind('click', function() {
+     var mode = parseInt($(this).attr('data-mode'), 10);
+     Player._mode = mode;
+     $('#modes div').removeClass('current');
+     $(this).addClass('current');
    });
 
 });
