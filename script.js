@@ -63,7 +63,7 @@ $(document).ready(function() {
      $(this).removeClass('active');
    });
 
-   $('#modes div').bind('click', function() {
+   $('#modes div').bind(down, function() {
      var mode = parseInt($(this).attr('data-mode'), 10);
      Player._mode = mode;
      $('#modes div').removeClass('current');
