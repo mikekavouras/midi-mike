@@ -20,7 +20,7 @@ $(document).ready(function() {
      e.preventDefault();
      var $self = $(this);
      var note = $self.attr('data-note');
-     var octave = parseInt($self.attr('data-octave'));
+     var octave = parseInt($self.attr('data-octave'), 10);
      var rand = Math.floor(Math.random() * colors.length);
      $self.css('backgroundColor' , colors[rand]);
      if (Player._mode == 1) {

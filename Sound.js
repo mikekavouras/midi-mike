@@ -1,5 +1,5 @@
 Sound = {};
-Sound._notes = {
+Sound['_notes'] = {
   0: {
     "C"  : { "frequency" : "16.35",   "wavelength" : "2100" },
     "C#" : { "frequency" : "17.32",   "wavelength" : "1990" },
@@ -138,7 +138,7 @@ Sound._notes = {
   }
 };
 
-Sound._chords = {
+Sound['_chords'] = {
   'A'     : ['A', 'C#', 'E'],
   'Am'    : ['A', 'C', 'E'],
   'Bb'    : ['Bb', 'D', 'F'],
@@ -175,68 +175,12 @@ Sound._chords = {
   'G#dim' : ['G#', 'B', 'D']
 };
 
-Sound._keys = {
-  'A' : {
-    'A' : Sound._chords['A'],
-    'B' : Sound._chords['Bm'],
-    'C' : Sound._chords['C#m'],
-    'D' : Sound._chords['D'],
-    'E' : Sound._chords['E'],
-    'F' : Sound._chords['F#m'],
-    'G' : Sound._chords['G#dim']
-  },
-  'B' : {
-    'B' : Sound._chords['B'],
-    'C' : Sound._chords['C#m'],
-    'D' : Sound._chords['D#m'],
-    'E' : Sound._chords['E'],
-    'F' : Sound._chords['F#'],
-    'G' : Sound._chords['G#m'],
-    'A' : Sound._chords['A#dim']
-  },
-  'C' : {
-    'C' : Sound._chords['C'],
-    'D' : Sound._chords['Dm'],
-    'E' : Sound._chords['Em'],
-    'F' : Sound._chords['F'],
-    'G' : Sound._chords['G'],
-    'A' : Sound._chords['Am'],
-    'B' : Sound._chords['Bdim']
-  },
-  'D' : {
-    'D' : Sound._chords['D'],
-    'E' : Sound._chords['Em'],
-    'F' : Sound._chords['F#m'],
-    'G' : Sound._chords['G'],
-    'A' : Sound._chords['A'],
-    'B' : Sound._chords['Bm'],
-    'C' : Sound._chords['C#dim']
-  },
-  'E' : {
-    'E' : Sound._chords['E'],
-    'F' : Sound._chords['F#m'],
-    'G' : Sound._chords['G#m'],
-    'A' : Sound._chords['A'],
-    'B' : Sound._chords['B'],
-    'C' : Sound._chords['C#m'],
-    'D' : Sound._chords['D#dim']
-  },
-  'F' : {
-    'F' : Sound._chords['F'],
-    'G' : Sound._chords['Gm'],
-    'A' : Sound._chords['Am'],
-    'B' : Sound._chords['Bb'],
-    'C' : Sound._chords['C'],
-    'D' : Sound._chords['Dm'],
-    'E' : Sound._chords['Edim']
-  },
-  'G' : {
-    'G' : Sound._chords['G'],
-    'A' : Sound._chords['Am'],
-    'B' : Sound._chords['Bm'],
-    'C' : Sound._chords['C'],
-    'D' : Sound._chords['D'],
-    'E' : Sound._chords['Em'],
-    'F' : Sound._chords['F#dim']
-  }
+Sound['_keys'] = {
+  'A' : { 'A' : Sound._chords['A'], 'B' : Sound._chords['Bm'], 'C' : Sound._chords['C#m'], 'D' : Sound._chords['D'], 'E' : Sound._chords['E'], 'F' : Sound._chords['F#m'], 'G' : Sound._chords['G#dim'] },
+  'B' : { 'B' : Sound._chords['B'], 'C' : Sound._chords['C#m'], 'D' : Sound._chords['D#m'], 'E' : Sound._chords['E'], 'F' : Sound._chords['F#'], 'G' : Sound._chords['G#m'], 'A' : Sound._chords['A#dim'] },
+  'C' : { 'C' : Sound._chords['C'], 'D' : Sound._chords['Dm'], 'E' : Sound._chords['Em'], 'F' : Sound._chords['F'], 'G' : Sound._chords['G'], 'A' : Sound._chords['Am'], 'B' : Sound._chords['Bdim'] },
+  'D' : { 'D' : Sound._chords['D'], 'E' : Sound._chords['Em'], 'F' : Sound._chords['F#m'], 'G' : Sound._chords['G'], 'A' : Sound._chords['A'], 'B' : Sound._chords['Bm'], 'C' : Sound._chords['C#dim'] },
+  'E' : { 'E' : Sound._chords['E'], 'F' : Sound._chords['F#m'], 'G' : Sound._chords['G#m'], 'A' : Sound._chords['A'], 'B' : Sound._chords['B'], 'C' : Sound._chords['C#m'], 'D' : Sound._chords['D#dim'] },
+  'F' : { 'F' : Sound._chords['F'], 'G' : Sound._chords['Gm'], 'A' : Sound._chords['Am'], 'B' : Sound._chords['Bb'], 'C' : Sound._chords['C'], 'D' : Sound._chords['Dm'], 'E' : Sound._chords['Edim'] },
+  'G' : { 'G' : Sound._chords['G'], 'A' : Sound._chords['Am'], 'B' : Sound._chords['Bm'], 'C' : Sound._chords['C'], 'D' : Sound._chords['D'], 'E' : Sound._chords['Em'], 'F' : Sound._chords['F#dim'] }
 }

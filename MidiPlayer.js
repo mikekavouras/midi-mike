@@ -2,6 +2,7 @@ function MIDIPlayer() {
   this._context = new webkitAudioContext();
   this._mode = 1; // 1 = notes, 2 = chords
   this._currentWaveType = 0;
+  this._ocatave = 4;
   this._waveTypes = {
     "sine" : 0,
     "square" : 1,
@@ -42,10 +43,7 @@ MIDIPlayer.prototype = {
       source.connect(volume);
       volume.connect(this._context.destination);
       source.noteOn(0);
-    }
-
-    for (var i = 0; i < sources.length; i++) {
-      this.fadeOutSound(sources[i], volumes[i]);
+      this.fadeOutSound(source, volume);
     }
   },
 

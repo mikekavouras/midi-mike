@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no,width=device-width">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
   <title>webkitAudioContext</title>
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+  <link href="http://mikekavouras.com/mike.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 
 </head>
 <body>
+
+  <div class="header">
+    <p><a href="http://mikekavouras.com">Mike Kavouras</a></p>
+  </div>
+
+  <h1>WebkitAudioContext <span class="github"><a href="https://github.com/mikekavouras/midi-mike">view on github</a></span></h1>
 
   <div id="keyboard">
     <div class="white-keys">
@@ -63,6 +69,18 @@
   <div id="modes">
     <div data-mode="1" class="current">notes</div>
     <div data-mode="2">chords</div>
+  </div>
+
+  <div id="keys">
+    <select id="key">
+      <option name="A" value="A">A</option>
+      <option name="B" value="B">B</option>
+      <option name="C" value="C">C</option>
+      <option name="D" value="D">D</option>
+      <option name="E" value="E">E</option>
+      <option name="F" value="F">F</option>
+      <option name="G" value="G">G</option>
+    </select>
   </div>
 
   <script src="Sound.js"></script>
