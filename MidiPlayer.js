@@ -19,7 +19,7 @@ MIDIPlayer.prototype = {
 
   playNote: function(note, octave) {
     var source = this._context.createOscillator();
-    var volume = this._context.createGainNode();
+    var volume = this._context.createGain();
     source.frequency.value = Sound._notes[octave][note].frequency;
     source.type = this._currentWaveType;
     source.connect(volume);
@@ -35,7 +35,7 @@ MIDIPlayer.prototype = {
     var volumes = [];
     for (var i = 0; i < notes.length; i++) {
       var source = this._context.createOscillator();
-      var volume = this._context.createGainNode();
+      var volume = this._context.createGain();
       sources.push(source);
       volumes.push(volume);
       source.frequency.value = Sound._notes[octave][notes[i]].frequency;
